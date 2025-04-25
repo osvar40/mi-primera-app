@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import { useState } from 'react'
+import sena from './assets/sena.png'
+import viteLogo from '/vite.svg'
+import './App.css'
 import Saludo from './components/saludo'; // Importa el componente
 
 function App() {
@@ -10,38 +10,31 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+
+        <a href="https://sena.png" target="_blank">
+          <img src={sena} className="logo react" alt="React logo" />
         </a>
       </div>
-
-      <h1>Vite + React</h1>
+      <h1>mi primer a App</h1>
 
       <div>
-        {/* Usa el componente personalizado de saludo */}
-        <Saludo nombre="Oscar" />
-      </div>
+    <Saludo nombre="oscar" />
+  </div>
 
-      <div className="card">
-        <button onClick={() => setCount(count + 1)}>
-          Aumentar: {count}
-        </button>
-
-        <button onClick={() => setCount(count - 1)}>
-          Disminuir: {count}
-        </button>
-
+      <div className="card">  
+        <p>El contador esta en {count} </p>
+        <button onClick={() => setCount((count) => count + 1)}>incrementar</button>
+        <button onClick={() => setCount((count) => count - 1)}>decrementar</button>
+       
         <p>
-          Edita <code>src/App.jsx</code> y guarda para probar HMR
+          Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
 
       <p className="read-the-docs">
-        Haz clic en los logos de Vite y React para aprender más
+        Click on the Vite and React logos to learn more
       </p>
+
     </>
   );
 }
